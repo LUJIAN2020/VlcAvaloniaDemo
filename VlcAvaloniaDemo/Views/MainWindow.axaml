@@ -19,18 +19,20 @@
 
     <Grid Margin="5" RowDefinitions="auto,*">
         <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
-            <Button
-                Command="{Binding OptionsCommand}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
-                Content="播放" />
+            <Button Command="{Binding SelectVideoAsyncCommand}" Content="选择" />
             <Button
                 Margin="5,0"
                 Command="{Binding OptionsCommand}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
-                Content="暂停" />
+                CommandParameter="{Binding $self.Content}"
+                Content="播放" />
             <Button
                 Command="{Binding OptionsCommand}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
+                CommandParameter="{Binding $self.Content}"
+                Content="暂停" />
+            <Button
+                Margin="5,0"
+                Command="{Binding OptionsCommand}"
+                CommandParameter="{Binding $self.Content}"
                 Content="停止" />
         </StackPanel>
 
