@@ -18,6 +18,7 @@ namespace VlcAvaloniaDemo.ViewModels
 
         string mrl = "";
 
+
         private readonly LibVLC _libVlc = new LibVLC();
         public MainWindowViewModel()
         {
